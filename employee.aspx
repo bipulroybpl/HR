@@ -1,6 +1,5 @@
-﻿<%@ Page Title="Employee Personal Data" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="employee.aspx.vb" Inherits="employee" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="employee.aspx.vb" Inherits="Employee" %>
+<asp:Content ID="Content3" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
         #Panel1
         {
@@ -8,7 +7,7 @@
         }
         </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:ScriptManager ID="ScriptManager2" runat="server">
                     </asp:ScriptManager>
                <br />
@@ -177,6 +176,18 @@
                         <asp:Label ID="Label61" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
                     </td>
                 </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label66" runat="server" Text="Passport No :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox29" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
                 <tr>
                     <td align="left" valign="top">
                         <asp:Label ID="Label29" runat="server" Text="Enter Telephone (Resi) :"></asp:Label>
@@ -252,6 +263,15 @@
                             </td>  
                         </tr>  
                     </table>
+                            </asp:View>
+
+                            <asp:View ID="View5" runat="server">
+
+                            </asp:View>
+
+                            <asp:View ID="View6" runat="server">
+                            </asp:View>
+                            <asp:View ID="View7" runat="server">
                             </asp:View>
 
                             <asp:View ID="View2" runat="server">
@@ -465,9 +485,6 @@
                          </tr>
                                  </table>
                             </asp:View>
-                            <asp:View ID="View5" runat="server">
-
-                            </asp:View>
 
                         </asp:MultiView>
 
@@ -600,4 +617,3 @@
     </Triggers>
     </asp:UpdatePanel>
 </asp:Content>
-
