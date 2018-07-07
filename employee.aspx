@@ -50,14 +50,14 @@
                     <td align="left" valign="top" colspan="6" style="background-color: #D7D7D7">
                         <asp:Label ID="Label45" runat="server" EnableTheming="False" Font-Bold="True" 
                             Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" 
-                            Text="Employee Personal Details"></asp:Label>
+                            Text="Employee Details"></asp:Label>
                     </td>
                     <td align="left" style="background-color: #D7D7D7" valign="top">
                         &nbsp;</td>
                 </tr>
                 <tr>
                     <td align="left" valign="top">
-                        <asp:Label ID="Label31" runat="server" Text="Company :"></asp:Label>
+                        <asp:Label ID="Label31" runat="server" Text="Company/Organization Name :"></asp:Label>
                     </td>
                     <td align="left" valign="top">
                         <asp:DropDownList ID="DropDownList6" runat="server" AutoPostBack="True" Width="281px">
@@ -67,13 +67,69 @@
                         <asp:Label ID="Label58" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
                     </td>
                     <td align="left" valign="top">
-                        <asp:Label ID="Label30" runat="server" Text="Enter Old Employee ID :"></asp:Label>
+                        <asp:Label ID="Label30" runat="server" Text="Enter Old Employee ID (E):"></asp:Label>
                     </td>
                     <td align="left" valign="top">
                         <asp:TextBox ID="TextBox28" runat="server" Width="281px"></asp:TextBox>
                     </td>
                     <td align="left" valign="top">&nbsp;</td>
                 </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label67" runat="server" Text="Branch of Posting :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList7" runat="server" AutoPostBack="True" Width="281px">
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label68" runat="server" Text="Department Name :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList8" runat="server" AutoPostBack="True" Width="281px">
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label69" runat="server" Text="Title :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList9" runat="server" AutoPostBack="True" Width="281px">
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label70" runat="server" Text="Designation :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList10" runat="server" AutoPostBack="True" Width="281px">
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label71" runat="server" Text="Date of Joining :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox30" runat="server" onBlur="hidecalendar()" onfocus="showcalendar()" Width="260px"></asp:TextBox>
+                                                        <a id="A3" name="anchor2" onclick="cal.select(document.forms['aspnetForm'].ctl00$ContentPlaceHolder1$TextBox30,'img2','dd/MM/yyyy'); return false;">
+                                                        <img id="img3" src="calendar.gif" />
+                                                        </a>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label72" runat="server" Text="Nationality :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList11" runat="server" AutoPostBack="True" Width="281px">
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
                 <tr>
                     <td align="left" valign="top">
                         <asp:Label ID="Label1" runat="server" Text="Enter Employee Name :"></asp:Label>
@@ -86,7 +142,7 @@
                     </td>
                     <td align="left" valign="top">
                         <asp:Label ID="Label3" runat="server" Text="Enter Father Name :"></asp:Label>
-                    </td>
+                        (E)</td>
                     <td align="left" valign="top">
                         <asp:TextBox ID="TextBox3" runat="server" Width="281px"></asp:TextBox>
                     </td>
@@ -95,7 +151,7 @@
                 <tr>
                     <td align="left" valign="top">
                         <asp:Label ID="Label25" runat="server" Text="Enter Mother Name :"></asp:Label>
-                    </td>
+                        (E)</td>
                     <td align="left" valign="top">
                         <asp:TextBox ID="TextBox23" runat="server" Width="281px"></asp:TextBox>
                     </td>
@@ -103,7 +159,7 @@
                         &nbsp;</td>
                     <td align="left" valign="top">
                         <asp:Label ID="Label27" runat="server" Text="Enter Spouse Name :"></asp:Label>
-                    </td>
+                        (E)</td>
                     <td align="left" valign="top">
                         <asp:TextBox ID="TextBox25" runat="server" Width="281px"></asp:TextBox>
                     </td>
@@ -112,7 +168,7 @@
                 <tr>
                     <td align="left" valign="top">
                         <asp:Label ID="Label4" runat="server" Text="Enter DOB :"></asp:Label>
-                    </td>
+                        (E)</td>
                     <td align="left" valign="top" style="position: relative;">
                                 <asp:TextBox ID="TextBox4" runat="server" Width="260px" 
                                     onfocus="showcalendar()" onBlur="hidecalendar()"></asp:TextBox>
@@ -142,7 +198,7 @@
                 <tr>
                     <td align="left" valign="top">
                         <asp:Label ID="Label6" runat="server" Text="Blood Group :"></asp:Label>
-                    </td>
+                        (E)</td>
                     <td align="left" valign="top">
                         <asp:TextBox ID="TextBox6" runat="server" Width="281px"></asp:TextBox>
                     </td>
@@ -184,8 +240,12 @@
                                                         <asp:TextBox ID="TextBox29" runat="server" Width="281px"></asp:TextBox>
                                                     </td>
                                                     <td align="left" valign="top">&nbsp;</td>
-                                                    <td align="left" valign="top">&nbsp;</td>
-                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label73" runat="server" Text="Driving Lisence No :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox31" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
                                                     <td align="left" valign="top">&nbsp;</td>
                                                 </tr>
                 <tr>
@@ -217,15 +277,18 @@
                     <td align="left" valign="top">
                         &nbsp;</td>
                     <td align="left" valign="top">
-                        &nbsp;</td>
+                        <asp:Label ID="Label74" runat="server" Text="Religion :"></asp:Label>
+                    </td>
                     <td align="left" valign="top">
-                        &nbsp;</td>
+                        <asp:DropDownList ID="DropDownList12" runat="server" Width="281px">
+                        </asp:DropDownList>
+                    </td>
                     <td align="left" valign="top">&nbsp;</td>
                 </tr>
                 <tr>
                     <td align="left" valign="top">
                         <asp:Label ID="Label11" runat="server" Text="Enter Permanent Address :"></asp:Label>
-                    </td>
+                        (E)</td>
                     <td align="left" valign="top">
                         <asp:TextBox ID="TextBox11" runat="server" Width="281px" Height="118px" 
                             TextMode="MultiLine"></asp:TextBox>
@@ -234,7 +297,7 @@
                         &nbsp;</td>
                     <td align="left" valign="top">
                         <asp:Label ID="Label26" runat="server" Text="Enter Present Address :"></asp:Label>
-                        <br />
+                        (E)<br />
                         <asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" 
                             Font-Names="Calibri" Font-Size="Medium">Copy</asp:LinkButton>
                     </td>
@@ -266,12 +329,501 @@
                             </asp:View>
 
                             <asp:View ID="View5" runat="server">
+              <table border="0" cellpadding="5" cellspacing="0">
+              
+                <tr>
+                    <td align="left" valign="top" colspan="6" style="background-color: #D7D7D7">
+                        <asp:Label ID="Label35" runat="server" EnableTheming="False" Font-Bold="True" 
+                            Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" 
+                            Text="Physical Details"></asp:Label>
+                    </td>
+                    <td align="left" style="background-color: #D7D7D7" valign="top">
+                        &nbsp;</td>
+                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label41" runat="server" Text="Enter Gender :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList16" runat="server" AutoPostBack="True" Width="281px">
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label42" runat="server" Text="Enter Blood Group :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList17" runat="server" AutoPostBack="True" Width="281px">
+                                                        </asp:DropDownList>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label43" runat="server" Text="Enter Date of Birth :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox7" runat="server" onBlur="hidecalendar()" onfocus="showcalendar()" Width="260px"></asp:TextBox>
+                                                        <a id="A5" name="anchor2" onclick="cal.select(document.forms['aspnetForm'].ctl00$ContentPlaceHolder1$TextBox30,'img2','dd/MM/yyyy'); return false;">
+                                                        <img id="img5" src="calendar.gif" />
+                                                        </a>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label44" runat="server" Text="Enter Age :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox36" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label46" runat="server" Text="Enter Height (Ft) :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:TextBox ID="TextBox12" runat="server" Width="281px"></asp:TextBox>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label47" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label48" runat="server" Text="Enter Weight (Kg) :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                        <asp:TextBox ID="TextBox13" runat="server" Width="281px"></asp:TextBox>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label49" runat="server" Text="Mole Identification or Other Marks :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                         <asp:TextBox ID="TextBox5" runat="server" Width="281px" Height="118px" 
+                            TextMode="MultiLine"></asp:TextBox>
+                        &nbsp;</td>
+                    <td align="left" valign="top">
+                        &nbsp;</td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label50" runat="server" Text="Enter Physical Illness if any :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                        <asp:TextBox ID="TextBox37" runat="server" Height="118px" TextMode="MultiLine" Width="281px"></asp:TextBox>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label51" runat="server" Text="Enter Appearance :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top" style="position: relative;">
+                                    
+                                &nbsp;<asp:DropDownList ID="DropDownList20" runat="server" Width="281px">
+                                </asp:DropDownList>
+                        </a>
+                           
+                  
+                    </td>
+                    <td align="left" valign="top" style="position: relative;">
+                                &nbsp;</td>
+                </tr>
 
+                          <tr>  
+                            <td>  
+                                
+                                <asp:Button ID="Button39" runat="server" Text="Previous" Width="71px" />
+                                
+                            </td>  
+                            <td>  
+                                <asp:Button ID="Button15" runat="server" Text="Next" Width="71px" />  
+                            </td>  
+                        </tr>  
+                    </table>
                             </asp:View>
 
                             <asp:View ID="View6" runat="server">
+                                 <table border="0" cellpadding="5" cellspacing="0">
+              
+                <tr>
+                    <td align="left" valign="top" colspan="6" style="background-color: #D7D7D7">
+                        <asp:Label ID="Label36" runat="server" EnableTheming="False" Font-Bold="True" 
+                            Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" 
+                            Text="Communication Detials"></asp:Label>
+                    </td>
+                    <td align="left" style="background-color: #D7D7D7" valign="top">
+                        &nbsp;</td>
+                </tr>
+                                                <tr>
+                                                    <td align="left" colspan="6" style="background-color: #F0F0F0" valign="top">
+                                                        <asp:Label ID="Label75" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium" ForeColor="Black" Text="Present Address:"></asp:Label>
+                                                    </td>
+                                                    <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                     </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label37" runat="server" Text="Enter Village/House No/Area Name :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox40" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label38" runat="server" Text="Enter Road Name/Block/Sector :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox41" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label39" runat="server" Text="Enter Division :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList21" runat="server" Width="281px">
+                                                        </asp:DropDownList>
+                                                        </a>
+                                                        </a>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label40" runat="server" Text="Enter District :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        
+                                                        <asp:DropDownList ID="DropDownList22" runat="server" Width="281px">
+                                                        </asp:DropDownList>
+                                                        </a>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label52" runat="server" Text="Enter Police Station :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList23" runat="server" Width="281px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label53" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label54" runat="server" Text="Enter Post Office :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList24" runat="server" Width="281px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label76" runat="server" Text="Enter Post Code :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                                   
+                                <asp:DropDownList ID="DropDownList25" runat="server" Height="22px" Width="280px">
+                                </asp:DropDownList>
+                           
+                  
+                    </td>
+                    <td align="left" valign="top">
+                                &nbsp;</td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label77" runat="server" Text="Country :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList26" runat="server" Height="22px" Width="280px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+
+                        <tr>
+                                                    <td align="left" colspan="6" style="background-color: #F0F0F0" valign="top">
+                                                        <asp:Label ID="Label55" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium" ForeColor="Black" Text="Present Address:"></asp:Label>
+                                                        <asp:CheckBox ID="CheckBox3" runat="server" Text="Same as Present Address" />
+                                                    </td>
+                                                    <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                     </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label56" runat="server" Text="Enter Village/House No/Area Name :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox32" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label57" runat="server" Text="Enter Road Name/Block/Sector :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox33" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label78" runat="server" Text="Enter Division :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList13" runat="server" Width="281px">
+                                                        </asp:DropDownList>
+                                                        </a>
+                                                        </a>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label79" runat="server" Text="Enter District :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        
+                                                        <asp:DropDownList ID="DropDownList14" runat="server" Width="281px">
+                                                        </asp:DropDownList>
+                                                        </a>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label80" runat="server" Text="Enter Police Station :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList15" runat="server" Width="281px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label81" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label82" runat="server" Text="Enter Post Office :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList18" runat="server" Width="281px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label83" runat="server" Text="Enter Post Code :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                                   
+                                <asp:DropDownList ID="DropDownList19" runat="server" Height="22px" Width="280px">
+                                </asp:DropDownList>
+                           
+                  
+                    </td>
+                    <td align="left" valign="top">
+                                &nbsp;</td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label84" runat="server" Text="Country :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList27" runat="server" Height="22px" Width="280px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+
+
+                          <tr>  
+                            <td>  
+                                
+                                <asp:Button ID="Button38" runat="server" Text="Previous" Width="71px" />
+                                
+                            </td>  
+                            <td>  
+                                <asp:Button ID="Button16" runat="server" Text="Next" Width="71px" />  
+                            </td>  
+                        </tr>  
+                    </table>
                             </asp:View>
                             <asp:View ID="View7" runat="server">
+                                <table border="0" cellpadding="5" cellspacing="0">
+
+                         <tr>
+                             <td align="left" colspan="4" style="background-color: #D7D7D7" valign="top">
+                                 <asp:Label ID="Label85" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Educational Details"></asp:Label>
+                             </td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                         </tr>
+                                    <tr>
+                                        <td align="left" colspan="4" style="background-color: #F0F0F0" valign="top">
+                                            <asp:Label ID="Label115" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium" ForeColor="Black" Text="Education 1:"></asp:Label>
+                                        </td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                    </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label86" runat="server" Text="Enter Course Name :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:DropDownList ID="DropDownList28" runat="server" Width="281px">
+                                 </asp:DropDownList>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label87" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label88" runat="server" Text="Enter Institute :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox44" runat="server" Width="281px"></asp:TextBox>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label89" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label90" runat="server" Text="Enter Passing Year :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                  <asp:TextBox ID="TextBox38" runat="server" onBlur="hidecalendar()" onfocus="showcalendar()" Width="260px"></asp:TextBox>
+                                                        <a id="A7" name="anchor2" onclick="cal.select(document.forms['aspnetForm'].ctl00$ContentPlaceHolder1$TextBox30,'img2','dd/MM/yyyy'); return false;">
+                                                        <img id="img7" src="calendar.gif" />
+                                 </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label91" runat="server" Text="Enter Completion Status :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:DropDownList ID="DropDownList30" runat="server" Width="281px">
+                                 </asp:DropDownList>
+                                 </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label92" runat="server" Text="Enter Scored/CGPA:"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox42" runat="server" Width="281px"></asp:TextBox>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label93" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label94" runat="server" Text="Grade/Division :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:DropDownList ID="DropDownList31" runat="server" Width="281px">
+                                 </asp:DropDownList>
+                                </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                         </tr>
+                          <tr>  
+                            <td>  
+                                <asp:Button ID="Button19" runat="server" Text="Add" Width="71px" Font-Bold="True" />
+                            </td>  
+                            <td>  
+                                &nbsp;</td>  
+                        </tr>  
+                                    <tr>
+                                        <td>
+                                            <asp:Button ID="Button17" runat="server" Text="Previous" Width="71px" />
+                                        </td>
+                                        <td>
+                                            <asp:Button ID="Button18" runat="server" Text="Next" Width="71px" />
+                                        </td>
+                                    </tr>
+                         </table>
+                            </asp:View>
+
+                            <asp:View ID="View8" runat="server">
+                                <table border="0" cellpadding="5" cellspacing="0">
+
+                         <tr>
+                             <td align="left" colspan="4" style="background-color: #D7D7D7" valign="top">
+                                 <asp:Label ID="Label95" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Training Details"></asp:Label>
+                             </td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                         </tr>
+                                    <tr>
+                                        <td align="left" colspan="4" style="background-color: #F0F0F0" valign="top">
+                                            <asp:Label ID="Label114" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium" ForeColor="Black" Text="Training 1:"></asp:Label>
+                                        </td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                    </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label96" runat="server" Text="Enter Training Title :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox43" runat="server" Width="281px"></asp:TextBox>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label97" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label98" runat="server" Text="Enter Institute :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox45" runat="server" Width="281px"></asp:TextBox>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label99" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label100" runat="server" Text="Enter Training Year :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                  <asp:TextBox ID="TextBox34" runat="server" onBlur="hidecalendar()" onfocus="showcalendar()" Width="260px"></asp:TextBox>
+                                                        <a id="A6" name="anchor2" onclick="cal.select(document.forms['aspnetForm'].ctl00$ContentPlaceHolder1$TextBox30,'img2','dd/MM/yyyy'); return false;">
+                                                        <img id="img6" src="calendar.gif" />
+                                 </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label101" runat="server" Text="Topic Coverd :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox46" runat="server" Width="281px"></asp:TextBox>
+                                 </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label102" runat="server" Text="Enter Duration (Months):"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox35" runat="server" Width="281px"></asp:TextBox>
+                             </td>
+                             <td align="left" valign="top">
+                                 &nbsp;</td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label104" runat="server" Text="Achievement :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox47" runat="server" Width="281px"></asp:TextBox>
+                                </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                         </tr>
+                          <tr>  
+                            <td>  
+                                <asp:Button ID="Button20" runat="server" Text="Add" Width="71px" Font-Bold="True" />
+                            </td>  
+                            <td>  
+                                &nbsp;</td>  
+                        </tr>  
+                                    <tr>
+                                        <td>
+                                            <asp:Button ID="Button21" runat="server" Text="Previous" Width="71px" />
+                                        </td>
+                                        <td>
+                                            <asp:Button ID="Button22" runat="server" Text="Next" Width="71px" />
+                                        </td>
+                                    </tr>
+                         </table>
                             </asp:View>
 
                             <asp:View ID="View2" runat="server">
@@ -279,11 +831,8 @@
                      <table border="0" cellpadding="5" cellspacing="0">
 
                          <tr>
-                             <td align="left" valign="top">&nbsp;</td>
-                         </tr>
-                         <tr>
                              <td align="left" colspan="4" style="background-color: #D7D7D7" valign="top">
-                                 <asp:Label ID="Label33" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Posting Details"></asp:Label>
+                                 <asp:Label ID="Label33" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Posting Details (Elimination)"></asp:Label>
                              </td>
                              <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
                              <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
@@ -314,15 +863,10 @@
                              <td align="left" valign="top">
                                  <asp:Label ID="Label13" runat="server" Text="Enter Designation :"></asp:Label>
                              </td>
-                             <td align="left" valign="top"><%-- <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                            <ContentTemplate>--%>
+                             <td align="left" valign="top">
                                  <asp:DropDownList ID="DropDownList4" runat="server" Width="281px">
                                  </asp:DropDownList>
-                                 <%--  </ContentTemplate>
-                            <Triggers>
-                            <asp:AsyncPostBackTrigger ControlID="DropdownList5" EventName="SelectedIndexChanged" />
-                            </Triggers>
-                        </asp:UpdatePanel>--%></td>
+                                </td>
                              <td align="left" valign="top">&nbsp;</td>
                              <td align="left" valign="top">
                                  <asp:Label ID="Label14" runat="server" Text="Enter Date of Appointment :"></asp:Label>
@@ -373,11 +917,683 @@
                          </table>
 
                             </asp:View>
+                            <asp:View ID="View10" runat="server">
+                                     <table border="0" cellpadding="5" cellspacing="0">
+
+                         <tr>
+                             <td align="left" colspan="4" style="background-color: #D7D7D7" valign="top">
+                                 <asp:Label ID="Label121" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Language Proficiency"></asp:Label>
+                             </td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                         </tr>
+                                    <tr>
+                                        <td align="left" colspan="4" style="background-color: #F0F0F0" valign="top">
+                                            <asp:Label ID="Label122" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium" ForeColor="Black" Text="Language 1:"></asp:Label>
+                                        </td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label131" runat="server" Text="Language:"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList29" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label132" runat="server" Text="Reading :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList34" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label133" runat="server" Text="Writing:"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList35" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label134" runat="server" Text="Speaking :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList36" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                          <tr>  
+                            <td>  
+                                <asp:Button ID="Button26" runat="server" Text="Add" Width="71px" Font-Bold="True" />
+                            </td>  
+                            <td>  
+                                &nbsp;</td>  
+                        </tr>  
+                                    <tr>
+                                        <td>
+                                            <asp:Button ID="Button27" runat="server" Text="Previous" Width="71px" />
+                                        </td>
+                                        <td>
+                                            <asp:Button ID="Button28" runat="server" Text="Next" Width="71px" />
+                                        </td>
+                                    </tr>
+                         </table>
+                            </asp:View>
+                            <asp:View ID="View11" runat="server">
+                                           <table border="0" cellpadding="5" cellspacing="0">
+
+                         <tr>
+                             <td align="left" colspan="4" style="background-color: #D7D7D7" valign="top">
+                                 <asp:Label ID="Label123" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Bank Details"></asp:Label>
+                             </td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                         </tr>
+                                    <tr>
+                                        <td align="left" colspan="4" style="background-color: #F0F0F0" valign="top">
+                                            <asp:Label ID="Label124" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium" ForeColor="Black" Text="Companies Salary Account:"></asp:Label>
+                                        </td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label125" runat="server" Text="Bank Code:"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList37" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label126" runat="server" Text="Name of the Bank :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList38" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label127" runat="server" Text="Branch Code:"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList39" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label128" runat="server" Text="Branch Name :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList40" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                                               <tr>
+                                                   <td align="left" valign="top">
+                                                       <asp:Label ID="Label135" runat="server" Text="City :"></asp:Label>
+                                                   </td>
+                                                   <td align="left" valign="top">
+                                                       <asp:DropDownList ID="DropDownList41" runat="server" Width="281px">
+                                                       </asp:DropDownList>
+                                                   </td>
+                                                   <td align="left" valign="top">&nbsp;</td>
+                                                   <td align="left" valign="top">
+                                                       <asp:Label ID="Label138" runat="server" Text="Routing Number:"></asp:Label>
+                                                   </td>
+                                                   <td align="left" valign="top">
+                                                       <asp:DropDownList ID="DropDownList43" runat="server" Width="281px">
+                                                       </asp:DropDownList>
+                                                   </td>
+                                                   <td align="left" valign="top">&nbsp;</td>
+                                               </tr>
+                                               <tr>
+                                                   <td align="left" valign="top">
+                                                       <asp:Label ID="Label136" runat="server" Text="Account Number :"></asp:Label>
+                                                   </td>
+                                                   <td align="left" valign="top">
+                                                       <asp:TextBox ID="TextBox59" runat="server" Width="281px"></asp:TextBox>
+                                                   </td>
+                                                   <td align="left" valign="top">&nbsp;</td>
+                                                   <td align="left" valign="top">
+                                                       <asp:Label ID="Label139" runat="server" Text="Account Type:"></asp:Label>
+                                                   </td>
+                                                   <td align="left" valign="top">
+                                                       <asp:DropDownList ID="DropDownList44" runat="server" Width="281px">
+                                                       </asp:DropDownList>
+                                                   </td>
+                                                   <td align="left" valign="top">&nbsp;</td>
+                                               </tr>
+                                               <tr>
+                                                   <td align="left" valign="top">
+                                                       <asp:Label ID="Label137" runat="server" Text="District Code:"></asp:Label>
+                                                   </td>
+                                                   <td align="left" valign="top">
+                                                       <asp:DropDownList ID="DropDownList42" runat="server" Width="281px">
+                                                       </asp:DropDownList>
+                                                   </td>
+                                                   <td align="left" valign="top">&nbsp;</td>
+                                                   <td align="left" valign="top">
+                                                       <asp:Label ID="Label140" runat="server" Text="District :"></asp:Label>
+                                                   </td>
+                                                   <td align="left" valign="top">
+                                                       <asp:DropDownList ID="DropDownList45" runat="server" Width="281px">
+                                                       </asp:DropDownList>
+                                                   </td>
+                                                   <td align="left" valign="top">&nbsp;</td>
+                                               </tr>
+                          <tr>  
+                            <td>  
+                                <asp:Button ID="Button29" runat="server" Text="Add" Width="71px" Font-Bold="True" />
+                            </td>  
+                            <td>  
+                                &nbsp;</td>  
+                        </tr>  
+                                                <tr>
+                                        <td align="left" colspan="4" style="background-color: #F0F0F0" valign="top">
+                                            <asp:Label ID="Label129" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium" ForeColor="Black" Text="Personal Account:"></asp:Label>
+                                        </td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label130" runat="server" Text="Bank Code:"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList46" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label141" runat="server" Text="Name of the Bank :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList47" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label142" runat="server" Text="Account Type :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList48" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label143" runat="server" Text="Branch Name :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList49" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                                               <tr>
+                                                   <td align="left" valign="top">
+                                                       <asp:Label ID="Label144" runat="server" Text="Account Number :"></asp:Label>
+                                                   </td>
+                                                   <td align="left" valign="top">
+                                                       <asp:TextBox ID="TextBox60" runat="server" Width="281px"></asp:TextBox>
+                                                   </td>
+                                                   <td align="left" valign="top">&nbsp;</td>
+                                               </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Button ID="Button30" runat="server" Text="Previous" Width="71px" />
+                                        </td>
+                                        <td>
+                                            <asp:Button ID="Button31" runat="server" Text="Next" Width="71px" />
+                                        </td>
+                                    </tr>
+                         </table>
+                            </asp:View>
+                            <asp:View ID="View12" runat="server">
+                                <table border="0" cellpadding="5" cellspacing="0">
+              
+                <tr>
+                    <td align="left" valign="top" colspan="6" style="background-color: #D7D7D7">
+                        <asp:Label ID="Label145" runat="server" EnableTheming="False" Font-Bold="True" 
+                            Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" 
+                            Text="Family Details"></asp:Label>
+                    </td>
+                    <td align="left" style="background-color: #D7D7D7" valign="top">
+                        &nbsp;</td>
+                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label146" runat="server" Text="Enter Father name :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox64" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label147" runat="server" Text="Enter Father Occuption :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox69" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label148" runat="server" Text="Enter Mother Name :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox65" runat="server" Width="281px"></asp:TextBox>
+                                                        </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label149" runat="server" Text="Enter Mother Occuption :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox54" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label150" runat="server" Text="Enter Spouse Name :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:TextBox ID="TextBox56" runat="server" Width="281px"></asp:TextBox>
+                    </td>
+                    <td align="left" valign="top">
+                        &nbsp;</td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label152" runat="server" Text="Enter Spouse Occuption :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                        <asp:TextBox ID="TextBox61" runat="server" Width="281px"></asp:TextBox>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label153" runat="server" Text="Child 1 :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                         <asp:TextBox ID="TextBox70" runat="server" Width="281px"></asp:TextBox>
+                        </td>
+                    <td align="left" valign="top">
+                        &nbsp;</td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label154" runat="server" Text="Child 1 Occuption :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                        <asp:TextBox ID="TextBox67" runat="server" Width="281px"></asp:TextBox>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+                                    <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label151" runat="server" Text="Child 2 :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                         <asp:TextBox ID="TextBox49" runat="server" Width="281px"></asp:TextBox>
+                        </td>
+                    <td align="left" valign="top">
+                        &nbsp;</td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label155" runat="server" Text="Child 2 Occuption :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                        <asp:TextBox ID="TextBox62" runat="server" Width="281px"></asp:TextBox>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Button ID="Button33" runat="server" Text="Add Child" Width="71px" />
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+
+                          <tr>  
+                            <td>  
+                                
+                                <asp:Button ID="Button37" runat="server" Text="Previous" Width="71px" />
+                                
+                            </td>  
+                            <td>  
+                                <asp:Button ID="Button32" runat="server" Text="Next" Width="71px" />  
+                            </td>  
+                        </tr>  
+                    </table>
+                            </asp:View>
+                            <asp:View ID="View9" runat="server">
+                                <table border="0" cellpadding="5" cellspacing="0">
+
+                         <tr>
+                             <td align="left" colspan="4" style="background-color: #D7D7D7" valign="top">
+                                 <asp:Label ID="Label103" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Experience Details"></asp:Label>
+                             </td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                             <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
+                         </tr>
+                                    <tr>
+                                        <td align="left" colspan="4" style="background-color: #F0F0F0" valign="top">
+                                            <asp:Label ID="Label113" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Times New Roman" Font-Size="Medium" ForeColor="Black" Text="Experience 1:"></asp:Label>
+                                        </td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                        <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                    </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label105" runat="server" Text="Enter Designation :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox39" runat="server" Width="281px"></asp:TextBox>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label106" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label107" runat="server" Text="Enter Name of Company :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox48" runat="server" Width="281px"></asp:TextBox>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label108" runat="server" EnableTheming="False" Font-Names="Calibri" ForeColor="Red" Text="*"></asp:Label>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label109" runat="server" Text="Enter Department :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                  <asp:TextBox ID="TextBox53" runat="server" Width="281px"></asp:TextBox>
+                                                       
+                                 </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label110" runat="server" Text="Years of Experience :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox50" runat="server" Width="281px"></asp:TextBox>
+                                 </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label111" runat="server" Text="Enter Company Location:"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox51" runat="server" Width="281px"></asp:TextBox>
+                             </td>
+                             <td align="left" valign="top">
+                                 &nbsp;</td>
+                             <td align="left" valign="top">
+                                 <asp:Label ID="Label112" runat="server" Text="Company Business :"></asp:Label>
+                             </td>
+                             <td align="left" valign="top">
+                                 <asp:TextBox ID="TextBox52" runat="server" Width="281px"></asp:TextBox>
+                                </td>
+                             <td align="left" valign="top">&nbsp;</td>
+                         </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label116" runat="server" Text="Reliving Type:"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList32" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label118" runat="server" Text="Reason for Reliving :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:DropDownList ID="DropDownList33" runat="server" Width="281px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label117" runat="server" Text="Area of Experience:"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:TextBox ID="TextBox55" runat="server" Width="281px"></asp:TextBox>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label119" runat="server" Text="Responsibilities :"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:TextBox ID="TextBox57" runat="server" Width="281px"></asp:TextBox>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" valign="top">
+                                            <asp:Label ID="Label120" runat="server" Text="Employement Period:"></asp:Label>
+                                        </td>
+                                        <td align="left" valign="top">
+                                            <asp:TextBox ID="TextBox58" runat="server" Width="281px"></asp:TextBox>
+                                        </td>
+                                        <td align="left" valign="top">&nbsp;</td>
+                                    </tr>
+                          <tr>  
+                            <td>  
+                                <asp:Button ID="Button23" runat="server" Text="Add" Width="71px" Font-Bold="True" />
+                            </td>  
+                            <td>  
+                                &nbsp;</td>  
+                        </tr>  
+                                    <tr>
+                                        <td>
+                                            <asp:Button ID="Button24" runat="server" Text="Previous" Width="71px" />
+                                        </td>
+                                        <td>
+                                            <asp:Button ID="Button25" runat="server" Text="Next" Width="71px" />
+                                        </td>
+                                    </tr>
+                         </table>
+                            </asp:View>
+                            <asp:View ID="View13" runat="server">
+                                         <table border="0" cellpadding="5" cellspacing="0">
+              
+                <tr>
+                    <td align="left" valign="top" colspan="6" style="background-color: #D7D7D7">
+                        <asp:Label ID="Label156" runat="server" EnableTheming="False" Font-Bold="True" 
+                            Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" 
+                            Text="Emergency Contact Details"></asp:Label>
+                    </td>
+                    <td align="left" style="background-color: #D7D7D7" valign="top">
+                        &nbsp;</td>
+                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label157" runat="server" Text="Relationship with the Employee :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox63" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label158" runat="server" Text="Name :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox66" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label159" runat="server" Text="Mobile Number :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox68" runat="server" Width="281px"></asp:TextBox>
+                                                        </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label160" runat="server" Text="Email Id :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox71" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label161" runat="server" Text="Land Phone No :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:TextBox ID="TextBox72" runat="server" Width="281px"></asp:TextBox>
+                    </td>
+                    <td align="left" valign="top">
+                        &nbsp;</td>
+                </tr>
+
+                          <tr>  
+                            <td>  
+                                
+                                <asp:Button ID="Button36" runat="server" Text="Previous" Width="71px" />
+                                
+                            </td>  
+                            <td>  
+                                <asp:Button ID="Button35" runat="server" Text="Next" Width="71px" />  
+                            </td>  
+                        </tr>  
+                    </table>
+                            </asp:View>
+                            <asp:View ID="View14" runat="server">
+                                   <table border="0" cellpadding="5" cellspacing="0">
+              
+                <tr>
+                    <td align="left" valign="top" colspan="6" style="background-color: #D7D7D7">
+                        <asp:Label ID="Label162" runat="server" EnableTheming="False" Font-Bold="True" 
+                            Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" 
+                            Text="Address of Emergency Contact Details"></asp:Label>
+                    </td>
+                    <td align="left" style="background-color: #D7D7D7" valign="top">
+                        &nbsp;</td>
+                </tr>
+                                                <tr>
+                                                    <td align="left" colspan="6" style="background-color: #F0F0F0" valign="top">
+                                                        <asp:CheckBox ID="CheckBox4" runat="server" Text="Same as Present Address" />
+                                                        <asp:CheckBox ID="CheckBox5" runat="server" Text="Same as Permanent Address" />
+                                                    </td>
+                                                    <td align="left" style="background-color: #F0F0F0" valign="top">&nbsp;</td>
+                                       </tr>
+                                               <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label163" runat="server" Text="Enter Village/House No/Area Name :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox73" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label164" runat="server" Text="Enter Road Name/Block/Sector :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:TextBox ID="TextBox74" runat="server" Width="281px"></asp:TextBox>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label165" runat="server" Text="Enter Division :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        <asp:DropDownList ID="DropDownList50" runat="server" Width="281px">
+                                                        </asp:DropDownList>
+                                                        </a>
+                                                        </a>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                    <td align="left" valign="top">
+                                                        <asp:Label ID="Label166" runat="server" Text="Enter District :"></asp:Label>
+                                                    </td>
+                                                    <td align="left" valign="top">
+                                                        
+                                                        <asp:DropDownList ID="DropDownList51" runat="server" Width="281px">
+                                                        </asp:DropDownList>
+                                                        </a>
+                                                    </td>
+                                                    <td align="left" valign="top">&nbsp;</td>
+                                                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label167" runat="server" Text="Enter Police Station :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList52" runat="server" Width="281px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">
+                        &nbsp;</td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label169" runat="server" Text="Enter Post Office :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList53" runat="server" Width="281px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label170" runat="server" Text="Enter Post Code :"></asp:Label>
+                        </td>
+                    <td align="left" valign="top">
+                                   
+                                <asp:DropDownList ID="DropDownList54" runat="server" Height="22px" Width="280px">
+                                </asp:DropDownList>
+                           
+                  
+                    </td>
+                    <td align="left" valign="top">
+                                &nbsp;</td>
+                    <td align="left" valign="top">
+                        <asp:Label ID="Label171" runat="server" Text="Country :"></asp:Label>
+                    </td>
+                    <td align="left" valign="top">
+                        <asp:DropDownList ID="DropDownList55" runat="server" Height="22px" Width="280px">
+                        </asp:DropDownList>
+                    </td>
+                    <td align="left" valign="top">&nbsp;</td>
+                </tr>
+                          <tr>  
+                            <td>  
+                                
+                                <asp:Button ID="Button34" runat="server" Text="Previous" Width="71px" />
+                                
+                            </td>  
+                            <td>  
+                                <asp:Button ID="Button40" runat="server" Text="Next" Width="71px" />  
+                            </td>  
+                        </tr>  
+                    </table>
+                            </asp:View>
                             <asp:View ID="View3" runat="server">
                                  <table border="0" cellpadding="5" cellspacing="0">
                          <tr>
                              <td align="left" colspan="4" style="background-color: #D7D7D7" valign="top">
-                                 <asp:Label ID="Label32" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Bank Details"></asp:Label>
+                                 <asp:Label ID="Label32" runat="server" EnableTheming="False" Font-Bold="True" Font-Names="Calibri" Font-Size="Medium" ForeColor="Black" Text="Bank Details (Elimination)"></asp:Label>
                              </td>
                              <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
                              <td align="left" style="background-color: #D7D7D7" valign="top">&nbsp;</td>
